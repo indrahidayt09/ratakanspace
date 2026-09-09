@@ -1,0 +1,92 @@
+/* QUEENS3 TRAINING SPECIFIC STYLING */
+.queens-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.image-container-box {
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    min-height: 280px;
+}
+
+.placeholder-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.placeholder-content i {
+    font-size: 2.2rem;
+    color: var(--text-muted);
+}
+
+.placeholder-content span {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    color: var(--neon-yellow);
+    letter-spacing: 0.5px;
+}
+
+.placeholder-content p {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    max-width: 220px;
+}
+
+.queens-info-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.q-info-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    padding: 14px 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    text-align: left;
+}
+
+.q-icon {
+    font-size: 1.2rem;
+    color: var(--neon-yellow);
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.q-info-item h4 {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    color: var(--text-main);
+    margin-bottom: 3px;
+}
+
+.q-info-item p {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+.queens-screenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.queens-link-wrapper {
+    color: rgb(90, 90, 90);
+}
