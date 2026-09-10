@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding | Gen Z Edition</title>
+    <!-- Google Fonts: Space Grotesk & Inter untuk kesan modern editorial tech -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Main Presentation Container -->
+    <main class="presentation-container">
+        
+        <!-- SLIDE TRACKER / PROGRESS BAR -->
+        <header class="slide-header">
+            <div class="brand-tag">
+                <span class="square-dot"></span> CORPS KREATOR // ONBOARDING
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="slide-counter">
+                <span id="currentSlideNum">01</span> / <span id="totalSlideNum">01</span>
+            </div>
+        </header>
+
+        <!-- SLIDES WRAPPER (Tempat menaruh semua slide) -->
+        <section class="slides-wrapper" id="slidesWrapper">
+
+            <!-- ========================================== -->
+            <!-- SLIDE 1: WELCOME / INTRO                   -->
+            <!-- ========================================== -->
+            <div class="slide active" data-slide="1">
+                <div class="slide-content-box">
+                    <div class="badge-pill">
+                        <span>✦ WELCOME TO</span>
+                    </div>
+                    <h1 class="main-title">
+                        CV RATAKAN <span class="neon-text">SPACE.</span>
+                    </h1>
+                    <p class="slide-subtitle">
+                        Mapan kaya bersama’ sukses bersama dengan ekosistem digital kami.
+                    </p>
+                    
+                    <div class="interactive-box">
+                        <button class="yellow-btn" id="welcomeBtn">
+                            <span>Initialize Session</span> <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        <p class="hint-text" id="interactiveFeedback">[ Click to verify system access ]</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================================== -->
+            <!-- SLIDE 2: PROFIL PERUSAHAAN (INTERAKTIF)    -->
+            <!-- ========================================== -->
+            <div class="slide" data-slide="2">
+                <div class="slide-content-box" style="max-width: 900px;">
+                    <div style="text-align: center; margin-bottom: 25px;">
+                        <span class="slide-number-tag">01 // PROFIL PERUSAHAAN</span>
+                        <p class="hint-text" style="margin-bottom: 6px;">Selamat datang di</p>
+                        <h2 class="slide-title" style="margin-bottom: 6px;">CV RATAKAN</h2>
+                        <p class="slide-subtitle" style="margin: 0 auto; color: var(--neon-yellow); font-weight: 700; font-style: italic; font-size: 0.95rem;">
+                            "Mapan Kaya Bersama"
+                        </p>
+                    </div>
+                    
+                    <div class="grid-profile">
+                        <!-- Card 1 -->
+                        <div class="profile-card clickable-card" data-detail="bidang">
+                            <h3 class="profile-heading">Bidang Usaha <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
+                            <p class="profile-text">Perusahaan penjualan online yang fokus pada niche produk penambah stamina pria dewasa.</p>
+                        </div>
+                        
+                        <!-- Card 2 -->
+                        <div class="profile-card clickable-card" data-detail="model">
+                            <h3 class="profile-heading">Model Bisnis <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
+                            <p class="profile-text">Pemasaran paid traffic (iklan media sosial) yang langsung mengarah ke WhatsApp dengan komitmen tinggi.</p>
+                        </div>
+                        
+                        <!-- Card 3 -->
+                        <div class="profile-card clickable-card" data-detail="produk">
+                            <h3 class="profile-heading">Produk Unggulan <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
+                            <p class="profile-text">Produk kesehatan dan penambah stamina pria dewasa berkualitas tinggi dan terpercaya.</p>
+                        </div>
+                        
+                        <!-- Card 4 -->
+                        <div class="profile-card clickable-card" data-detail="sumber">
+                            <h3 class="profile-heading">Sumber Customer <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
+                            <p class="profile-text">Pengunjung iklan berbayar (Meta Ads) yang dikonversi langsung secara personal melalui WhatsApp.</p>
+                        </div>
+                        
+                        <!-- Card 5 -->
+                        <div class="profile-card full-width clickable-card" data-detail="target">
+                            <h3 class="profile-heading">Target Customer <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
+                            <p class="profile-text">Pria paruh baya hingga usia senior (rentang usia 35 hingga 70 tahun) yang membutuhkan solusi kebugaran.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL / POPUP DETAIL RINCI -->
+                <div class="detail-modal" id="profileModal">
+                    <div class="modal-content">
+                        <button class="close-modal-btn" id="closeModalBtn"><i class="fa-solid fa-xmark"></i></button>
+                        <span class="modal-tag" id="modalTag">RINCIAN INFORMASI</span>
+                        <h3 class="modal-title" id="modalTitle">Judul Detail</h3>
+                        <p class="modal-desc" id="modalDesc">Penjelasan rinci akan muncul di sini...</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ========================================== -->
+            <!-- SLIDE 3: STRUKTUR CS & KEBIJAKAN WHATSAPP  -->
+            <!-- ========================================== -->
+            <div class="slide" data-slide="3">
+                <div class="slide-content-box" style="max-width: 900px;">
+                    <div style="margin-bottom: 20px;">
+                        <span class="slide-number-tag">03 // OPERASIONAL & TIM CS</span>
+                        <h2 class="slide-title">STRUKTUR TIM & <span class="neon-text">EKSPANSI CS.</span></h2>
+                        <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;"></p>
+                    </div>
+                    
+                    <!-- Diagram Struktur Tim Interaktif dengan Simulasi CRUD -->
+                    <div class="cs-structure-box">
+                        <div class="leader-badge interactive-node" data-role="leader">
+                            <span>CS LEADER - Pembimbing Utama</span>
+                            <i class="fa-solid fa-circle-question"></i>
+                        </div>
+                        <div class="structure-line"></div>
+                        
+                        <!-- Kontainer Dinamis untuk Anggota CS -->
+                        <div class="freelance-group" id="csMembersContainer">
+                            <!-- Render awal menggunakan JavaScript -->
+                        </div>
+
+                        <!-- Panel Kontrol Simulasi Tambah / Kurang CS -->
+                        <div class="crud-controls">
+                            <span class="crud-label"></span>
+                            <button class="crud-btn" id="removeCsBtn"><i class="fa-solid fa-minus"></i></button>
+                            <button class="crud-btn highlight-crud" id="addCsBtn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Poin Penting WhatsApp -->
+                    <div class="wa-requirement-box">
+                        <div class="wa-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div>
+                            <h3 class="profile-heading" style="margin-bottom: 4px;">Aturan Wajib: Minimal 3 WhatsApp Cadangan</h3>
+                            <p class="profile-text">
+                                Mengingat operasional chat sangat krusial, setiap CS wajib menyiapkan akun cadangan (WhatsApp biasa & WhatsApp Business) yang di-clone untuk mengantisipasi kendala teknis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL / POPUP DETAIL STRUKTUR TIM -->
+                <div class="detail-modal" id="csModal">
+                    <div class="modal-content">
+                        <button class="close-modal-btn" id="closeCsModalBtn"><i class="fa-solid fa-xmark"></i></button>
+                        <span class="modal-tag" id="csModalTag">BIMBINGAN & KOORDINASI</span>
+                        <h3 class="modal-title" id="csModalTitle">Peran Leader</h3>
+                        <p class="modal-desc" id="csModalDesc">Penjelasan detail koordinasi...</p>
+                    </div>
+                </div>
+            </div>
+
+
+             <!-- ========================================== -->
+            <!-- SLIDE 6: KEBIJAKAN 3 AKUN WHATSAPP         -->
+            <!-- ========================================== -->
+            <div class="slide" data-slide="6">
+                <div class="slide-content-box" style="max-width: 900px;">
+                    <div style="margin-bottom: 20px;">
+                        <span class="slide-number-tag">06 // MITIGASI RISIKO & SOP WA</span>
+                        <h2 class="slide-title">ATURAN WAJIB: <span class="neon-text">3 AKUN WHATSAPP.</span></h2>
+                        <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">[ Klik masing-masing kartu akun di bawah untuk melihat fungsi & strategi operasionalnya ]</p>
+                    </div>
+                    
+                    <!-- Grid 3 Akun WhatsApp Interaktif -->
+                    <div class="wa-cards-grid">
+                        <!-- WA Business (Utama Iklan) -->
+                        <div class="wa-card interactive-wa" data-wa="business">
+                            <div class="wa-card-header">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <span>1x WA Business</span>
+                            </div>
+                            <h3>Akun Utama Iklan</h3>
+                            <p>Menerima pesan dari traffic iklan berbayar (Meta Ads) secara langsung.</p>
+                            <span class="wa-detail-link">Lihat Detail <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+
+                        <!-- WA Biasa 1 (Tumbal Follow Up) -->
+                        <div class="wa-card interactive-wa" data-wa="biasa1">
+                            <div class="wa-card-header">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <span>1x WA Biasa</span>
+                            </div>
+                            <h3>Akun Tumbal #1</h3>
+                            <p>Digunakan khusus untuk follow-up customer yang belum sempat chat duluan.</p>
+                            <span class="wa-detail-link">Lihat Detail <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+
+                        <!-- WA Biasa 2 (Tumbal Follow Up) -->
+                        <div class="wa-card interactive-wa" data-wa="biasa2">
+                            <div class="wa-card-header">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <span>1x WA Biasa</span>
+                            </div>
+                            <h3>Akun Tumbal #2</h3>
+                            <p>Cadangan kedua untuk follow-up aktif guna menghindari risiko banned massal.</p>
+                            <span class="wa-detail-link">Lihat Detail <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Trigger Box Strategi -->
+                    <div class="trigger-box" style="margin-top: 15px;">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span><strong>Strategi Keamanan:</strong> Mengapa pakai WA biasa untuk follow-up? Karena menyapa duluan berisiko tinggi terkena banned, sehingga WA biasa diposisikan sebagai "tumbal" pelindung akun utama.</span>
+                    </div>
+                </div>
+
+                <!-- MODAL / POPUP DETAIL WHATSAPP -->
+                <div class="detail-modal" id="waModal">
+                    <div class="modal-content">
+                        <button class="close-modal-btn" id="closeWaModalBtn"><i class="fa-solid fa-xmark"></i></button>
+                        <span class="modal-tag" id="waModalTag">STRATEGI WHATSAPP</span>
+                        <h3 class="modal-title" id="waModalTitle">Judul Akun</h3>
+                        <p class="modal-desc" id="waModalDesc">Penjelasan rinci fungsi akun...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================================== -->
+            <!-- SLIDE 4: DISTRIBUSI PEMBAGIAN CHAT         -->
+            <!-- ========================================== -->
+            <div class="slide" data-slide="4">
+                <div class="slide-content-box" style="max-width: 950px;">
+                    <div style="margin-bottom: 20px;">
+                        <span class="slide-number-tag">04 // SISTEM APLIKASI QUEENS3</span>
+                        <h2 class="slide-title">SKEMA DISTRIBUSI <span class="neon-text">CHAT HARIAN.</span></h2>
+                        <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">[ Klik kartu di bawah untuk melihat rincian mekanisme filter data dan alur aplikasi Queens3 ]</p>
+                    </div>
+                    
+                    <!-- Simulasi Total Chat Masuk & Alur Queens3 -->
+                    <div class="total-chat-banner">
+                        <span class="chat-label-sm">Simulasi Beban Kerja via Sistem Queens3</span>
+                        <span class="chat-number-lg"><i class="fa-solid fa-server" style="font-size: 1.2rem; margin-right: 8px; color: var(--neon-yellow);"></i> 200 CHAT MASUK DARI IKLAN</span>
+                    </div>
+
+                    <!-- Grid Distribusi CS Interaktif -->
+                    <div class="grid-chat-distribution">
+                        <div class="dist-card highlight interactive-dist" data-dist="leader">
+                            <span class="dist-role">CS LEADER <i class="fa-solid fa-arrow-pointer"></i></span>
+                            <span class="dist-val">100 Chat</span>
+                            <span class="dist-desc">Filter & Kontrol Kualitas Utama</span>
+                        </div>
+                        <div class="dist-card interactive-dist" data-dist="cs1">
+                            <span class="dist-role">CS 1 (FREELANCE) <i class="fa-solid fa-arrow-pointer"></i></span>
+                            <span class="dist-val">50 Chat</span>
+                            <span class="dist-desc">Eksekusi Penjualan Langsung</span>
+                        </div>
+                        <div class="dist-card interactive-dist" data-dist="cs2">
+                            <span class="dist-role">CS 2 (FREELANCE) <i class="fa-solid fa-arrow-pointer"></i></span>
+                            <span class="dist-val">50 Chat</span>
+                            <span class="dist-desc">Eksekusi Penjualan Langsung</span>
+                        </div>
+                    </div>
+
+                    <!-- Trigger Box Penjelasan Teknis -->
+                    <div class="trigger-box">
+                        <i class="fa-solid fa-network-wired"></i>
+                        <span><strong>Mekanisme Teknis:</strong> Leads dari iklan masuk ke sistem aplikasi internal <strong>Queens3</strong>, dipilih dan diatur distribusinya secara proporsional, lalu dilanjutkan proses follow-up ke WhatsApp masing-masing CS.</span>
+                    </div>
+                </div>
+
+                <!-- MODAL / POPUP DETAIL RINCI SISTEM -->
+                <div class="detail-modal" id="distModal">
+                    <div class="modal-content">
+                        <button class="close-modal-btn" id="closeDistModalBtn"><i class="fa-solid fa-xmark"></i></button>
+                        <span class="modal-tag" id="distModalTag">RINCIAN SISTEM QUEENS3</span>
+                        <h3 class="modal-title" id="distModalTitle">Judul Peran</h3>
+                        <p class="modal-desc" id="distModalDesc">Penjelasan rinci tugas...</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+       
+
+       <!-- ========================================== -->
+            <!-- SLIDE 7: TABEL LENGKAP INSENTIF COD (90%-50%)-->
+            <!-- ========================================== -->
+            <div class="slide" data-slide="7">
+                <div class="slide-content-box" style="max-width: 900px;">
+                    <div style="margin-bottom: 15px;">
+                        <span class="slide-number-tag">07 // SKEMA REWARD & INSENTIF COD</span>
+                        <h2 class="slide-title">TIER INSENTIF <span class="neon-text">90% SAMPAI 50%.</span></h2>
+                        <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">[ Tabel ini khusus menghitung persentase keberhasilan paket <strong>COD</strong> dengan beban simulasi 50 paket ]</p>
+                    </div>
+                    
+                    <!-- Tabel Insentif Lengkap 90% - 50% -->
+                    <div class="incentive-table-container">
+                        <div class="incentive-header-row">
+                            <span>PERSENTASE COD DITERIMA (DARI 50 PAKET)</span>
+                            <span>RATE / PAKET</span>
+                            <span>TOTAL ESTIMASI</span>
+                        </div>
+                        <div class="incentive-row highlight-tier">
+                            <span class="tier-range">≥ 90% (45–50 paket)</span>
+                            <span class="tier-reward">Rp 1.500</span>
+                            <span class="tier-total">± Rp 75.000</span>
+                        </div>
+                        <div class="incentive-row">
+                            <span class="tier-range">80% – 89% (40–44 paket)</span>
+                            <span class="tier-reward">Rp 1.300</span>
+                            <span class="tier-total">± Rp 65.000</span>
+                        </div>
+                        <div class="incentive-row">
+                            <span class="tier-range">70% – 79% (35–39 paket)</span>
+                            <span class="tier-reward">Rp 1.000</span>
+                            <span class="tier-total">± Rp 50.000</span>
+                        </div>
+                        <div class="incentive-row">
+                            <span class="tier-range">60% – 69% (30–34 paket)</span>
+                            <span class="tier-reward">Rp 900</span>
+                            <span class="tier-total">± Rp 45.000</span>
+                        </div>
+                        <div class="incentive-row low-tier">
+                            <span class="tier-range">50% – 59% (25–29 paket)</span>
+                            <span class="tier-reward">Rp 750</span>
+                            <span class="tier-total">± Rp 37.500</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================================== -->
+            <!-- SLIDE 8: ATURAN TRANSFER VS COD            -->
+            <!-- ========================================== -->
+            <div class="slide" data-slide="8">
+                <div class="slide-content-box" style="max-width: 900px;">
+                    <div style="margin-bottom: 15px;">
+                        <span class="slide-number-tag">08 // ATURAN KHUSUS PEMBAYARAN</span>
+                        <h2 class="slide-title">SKEMA <span class="neon-text">COD VS TRANSFER.</span></h2>
+                        <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">[ Penjelasan rinci mengenai perhitungan insentif metode pembayaran ]</p>
+                    </div>
+                    
+                    <!-- Grid Penjelasan Transfer vs COD -->
+                    <div class="calc-grid" style="grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 12px;">
+                        <!-- Aturan COD -->
+                        <div class="calc-card">
+                            <span class="calc-tier-badge" style="color: var(--neon-yellow);">Sistem COD (Cash on Delivery)</span>
+                            <div class="calc-flow-text">
+                                <span class="calc-main-num">Berdasarkan Tier</span>
+                            </div>
+                            <div class="calc-math-box">
+                                <span>Insentif dihitung murni menggunakan persentase tabel tier (90% sampai 50%) dari total paket yang sukses diterima customer.</span>
+                            </div>
+                        </div>
+
+                        <!-- Aturan Transfer -->
+                        <div class="calc-card highlight-card" style="border-color: rgba(0, 255, 136, 0.4); background: rgba(0, 255, 136, 0.02);">
+                            <span class="calc-tier-badge" style="color: #00FF88;">Sistem Transfer (Non-COD)</span>
+                            <div class="calc-flow-text">
+                                <span class="calc-main-num" style="color: #00FF88;">Rp 5.000 / Paket</span>
+                            </div>
+                            <div class="calc-math-box">
+                                <span>Tidak dihitung berdasarkan persentase tier. Setiap pembeli yang sukses bayar via transfer langsung dihitung <strong>Rp 5.000 per paket</strong>.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trigger Box Etika -->
+                    <div class="trigger-box" style="border-left-color: #00FF88;">
+                        <i class="fa-solid fa-triangle-exclamation" style="color: #00FF88;"></i>
+                        <span><strong>Aturan Etika Komunikasi:</strong> Meskipun insentif transfer lebih besar (Rp 5.000), <strong>dilarang keras memaksa customer</strong> untuk transfer jika mereka ingin COD. Jangan sampai pemaksaan membuat customer risih berujung <em>cancel</em>! Utamakan kenyamanan pembeli.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================================== -->
+            <!-- SLIDE 11: PEMBUKAAN BAB 2 (PRAKTIKAL)      -->
+            <!-- ========================================== -->
+            <div class="slide" data-slide="11">
+                <div class="slide-content-box" style="max-width: 900px; text-align: center;">
+                    <div style="margin-bottom: 20px;">
+                        <span class="slide-number-tag">BAB II // HANDS-ON SESSION</span>
+                        <h1 class="slide-title" style="font-size: 2.8rem;">MASUK KE SESI <span class="neon-text">PRACTICAL.</span></h1>
+                        <p class="slide-subtitle" style="margin: 0 auto; max-width: 700px;">
+                            Teori sudah selesai. Sekarang saatnya kita bedah simulasi nyata operasional harian di CV Ratakan, mulai dari aplikasi internal hingga eksekusi chat langsung di lapangan.
+                        </p>
+                    </div>
+                    
+                    <!-- Kartu Info Sesi Praktik -->
+                    <div class="practical-intro-grid">
+                       <!-- Kartu Queens3 yang bisa diklik pindah halaman -->
+                        <div class="p-intro-card clickable-page-card" id="queensCard">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <h3>Aplikasi Queens3 <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem; color: var(--neon-yellow);"></i></h3>
+                            <p>Klik untuk membuka halaman simulasi sistem distribusi leads.</p>
+                        </div>
+                        <div class="p-intro-card">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <a href="anti-banned.html" class="nav-btn">Pelajari SOP Anti-Banned WA</a>
+                            <p>Simulasi penanganan template & strategi akun WA tumbal.</p>
+                        </div>
+                    </div>
+
+                    <!-- Trigger Box Pembuka -->
+                    <div class="trigger-box" style="margin-top: 20px; text-align: left;">
+                        <i class="fa-solid fa-circle-play"></i>
+                        <span><strong>Instruksi Sesi:</strong> Siapkan perangkat kalian, buka aplikasi pendukung, dan mari kita praktikkan langkah demi langkah tanpa terburu-buru.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================================== -->
+            <!-- SLIDE 9: PRINSIP UTAMA CUSTOMER SERVICE    -->
+            <!-- ========================================== -->
+            <div class="slide" data-slide="9">
+                <div class="slide-content-box" style="max-width: 900px;">
+                    <div style="margin-bottom: 20px;">
+                        <span class="slide-number-tag">09 // STANDAR KERJA TIM</span>
+                        <h2 class="slide-title">5 PRINSIP UTAMA <span class="neon-text">CUSTOMER SERVICE.</span></h2>
+                    </div>
+                    
+                    <!-- Grid 5 Prinsip CS -->
+                    <div class="principles-grid">
+                        <div class="principle-card">
+                            <span class="p-num">01</span>
+                            <div class="p-content">
+                                <h3>RESPON CEPAT</h3>
+                                <p>Jangan biarkan customer menunggu terlalu lama dalam balasan chat.</p>
+                            </div>
+                        </div>
+
+                        <div class="principle-card">
+                            <span class="p-num">02</span>
+                            <div class="p-content">
+                                <h3>IKUTI SOP</h3>
+                                <p>Patuhi prosedur perusahaan tanpa membuat aturan sendiri di luar ketentuan.</p>
+                            </div>
+                        </div>
+
+                        <div class="principle-card">
+                            <span class="p-num">03</span>
+                            <div class="p-content">
+                                <h3>CEK CUSTOMER</h3>
+                                <p>Pastikan status chat terlebih dahulu sebelum melakukan tindakan follow-up.</p>
+                            </div>
+                        </div>
+
+                        <div class="principle-card">
+                            <span class="p-num">04</span>
+                            <div class="p-content">
+                                <h3>JAGA KUALITAS ORDER</h3>
+                                <p>Fokus pada kualitas pesanan, bukan sekadar mengejar angka semata.</p>
+                            </div>
+                        </div>
+
+                        <div class="principle-card full-span">
+                            <span class="p-num">05</span>
+                            <div class="p-content">
+                                <h3>KEJAR PAKET DITERIMA</h3>
+                                <p>Prioritaskan keberhasilan paket agar sampai dan diterima dengan baik oleh customer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <!-- ========================================== -->
+            <!-- SLIDE 5: ALUR STATUS CHAT & FOLLOW UP      -->
+            <!-- ========================================== -->
+            <div class="slide" data-slide="5">
+                <div class="slide-content-box" style="max-width: 900px;">
+                    <div style="margin-bottom: 25px;">
+                        <span class="slide-number-tag">05 // SOP OPERASIONAL CHAT</span>
+                        <h2 class="slide-title">ALUR PENGECEKAN <span class="neon-text">STATUS CUSTOMER.</span></h2>
+                    </div>
+                    
+                    <!-- Flowchart / Alur Box -->
+                    <div class="flow-container">
+                        <div class="flow-step start-node">
+                            <i class="fa-solid fa-users"></i>
+                            <span>CUSTOMER MASUK</span>
+                        </div>
+                        
+                        <div class="flow-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+                        
+                        <div class="flow-question-box">
+                            <span class="flow-q-title">SUDAH PERNAH CHAT?</span>
+                            
+                            <div class="flow-branch-container">
+                                <!-- Branch Ya -->
+                                <div class="branch-card yes-branch">
+                                    <div class="branch-tag"><i class="fa-solid fa-check"></i> YA</div>
+                                    <p class="branch-text">Balas langsung menggunakan template yang telah disediakan.</p>
+                                </div>
+                                
+                                <!-- Branch Tidak -->
+                                <div class="branch-card no-branch">
+                                    <div class="branch-tag"><i class="fa-solid fa-xmark"></i> TIDAK</div>
+                                    <p class="branch-text">Gunakan WhatsApp cadangan sesuai SOP perusahaan.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trigger Box -->
+                    <div class="trigger-box" style="margin-top: 20px;">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <span><strong>Prinsip Utama:</strong> Selalu biasakan mengecek status customer terlebih dahulu sebelum melakukan tindakan lanjutan.</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ========================================== -->
+            <!-- SLIDE 10: PENUTUP & KESIMPULAN             -->
+            <!-- ========================================== -->
+            <div class="slide" data-slide="10">
+                <div class="slide-content-box" style="max-width: 900px; text-align: center;">
+                    <div style="margin-bottom: 20px;">
+                        <span class="slide-number-tag">10 // KESIMPULAN & WRAP UP</span>
+                        <h2 class="slide-title">SIAP <span class="neon-text">LEVEL UP?</span></h2>
+                    </div>
+                    
+                    <!-- Pesan Penutup / Quote Box -->
+                    <div class="closing-quote-box">
+                        <p class="closing-text">
+                            “Jadi kalau dari semua materi hari ini ada yang harus kalian ingat, sebenarnya cuma beberapa hal: <strong>pahami alurnya, ikuti SOP, cek customer sebelum follow up, jaga komunikasi, dan jangan cuma mengejar banyak order tapi kejar order yang benar-benar diterima.</strong>”
+                        </p>
+                    </div>
+
+                    <!-- Poin Semangat -->
+                    <div class="closing-mindset">
+                        <p>Kalian nggak harus langsung jago. Nanti akan ada proses belajar dan praktik. Yang penting mau belajar, mau diarahkan, dan bertanggung jawab sama pekerjaan.</p>
+                        <div class="final-motto">
+                            <i class="fa-solid fa-bolt"></i> TARGET KITA: ORDER YANG BERHASIL DITERIMA CUSTOMER <i class="fa-solid fa-bolt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- NAVIGATION CONTROLS -->
+        <footer class="slide-footer">
+            <button class="nav-btn" id="prevBtn" disabled>
+                <i class="fa-solid fa-arrow-left"></i> Prev
+            </button>
+            <div class="nav-hint">Use Keyboard Arrows (← →)</div>
+            <button class="nav-btn" id="nextBtn">
+                Next <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </footer>
+
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
